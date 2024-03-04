@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Intro component with sign up form</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <main class="wrapper__main">
+        <section class="wrapper__main__intro">
+          <h1 class="intro__title">Learn to code by watching others</h1>
+          <p class="intro__description">
+            See how experienced developers solve problems in real-time. Watching
+            scripted tutorials is great, but understanding how developers think
+            is invaluable.
+          </p>
+        </section>
+
+        <section class="wrapper__main__offer">
+          <p class="offer__text">
+            <em>Try it free 7 days</em> then $20/mo. thereafter
+          </p>
+
+          <form action="#" method="post" class="offer__signup-form" novalidate>
+            <div class="signup-form__container">
+              <input
+                type="text"
+                class="signup-form__input"
+                name="First Name"
+                placeholder="First Name"
+                aria-invalid="false"
+                required
+              />
+              <p class="signup-form__error-message hidden">
+                First Name cannot be empty
+              </p>
+              <img
+                src="images/icon-error.svg"
+                alt=""
+                class="signup-form__error-icon hidden"
+              />
+            </div>
+            <div class="signup-form__container">
+              <input
+                type="text"
+                class="signup-form__input"
+                name="Last Name"
+                placeholder="Last Name"
+                aria-invalid="false"
+                required
+              />
+              <p class="signup-form__error-message hidden">
+                Last Name cannot be empty
+              </p>
+              <img
+                src="images/icon-error.svg"
+                alt=""
+                class="signup-form__error-icon hidden"
+              />
+            </div>
+            <div class="signup-form__container">
+              <input
+                type="email"
+                class="signup-form__input"
+                placeholder="Email Address"
+                name="Email"
+                aria-invalid="false"
+                required
+              />
+              <p class="signup-form__error-message hidden">
+                Email cannot be empty
+              </p>
+              <img
+                src="images/icon-error.svg"
+                alt=""
+                class="signup-form__error-icon hidden"
+              />
+            </div>
+            <div class="signup-form__container">
+              <input
+                type="password"
+                class="signup-form__input"
+                placeholder="Password"
+                name="Password"
+                aria-invalid="false"
+                required
+              />
+              <p class="signup-form__error-message hidden">
+                Password cannot be empty
+              </p>
+              <img
+                src="images/icon-error.svg"
+                alt=""
+                class="signup-form__error-icon hidden"
+              />
+            </div>
+            <button type="submit" class="signup-form__button">
+              Claim your free trial
+            </button>
+
+            <p class="signup-form__terms">
+              By clicking the button, you are agreeing to our
+              <a href="#">Terms and Services</a>
+            </p>
+          </form>
+        </section>
+      </main>
+      <footer class="footer">
+        <p class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">Kamran Kiani</a>.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

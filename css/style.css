@@ -1,0 +1,333 @@
+/* Color and Font Variables */
+:root {
+  /* Colors */
+  --primary-red: hsl(0, 100%, 74%);
+  --primary-green: hsl(154, 59%, 51%);
+  --primary-green-hover: hsl(154, 65%, 68%);
+  --accent-blue: hsl(248, 32%, 49%);
+  --neutral-dark-blue: hsl(249, 10%, 26%);
+  --neutral-dark-blue-placeHolder: hsla(246, 25%, 77%, 60%);
+  --neutral-grayish-blue: hsl(246, 25%, 77%);
+  --border-color: hsl(0, 0%, 87%, 100%);
+  /* Font */
+  --font-family: "Poppins", sans-serif;
+  --font-size-body: 16px;
+}
+/* ---------------------------- */
+/* CSS Reset */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: none;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* Mobile First */
+
+body {
+  background-image: url("/images/bg-intro-mobile.png");
+  background-color: var(--primary-red);
+  background-size: cover;
+  font-family: var(--font-family);
+  font-size: var(--font-size-body);
+  text-align: center;
+}
+
+.wrapper {
+  max-width: 23.4375rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+}
+
+.wrapper__main {
+  padding: 5.5rem 1.5rem 4.25rem;
+}
+
+.wrapper__main__intro {
+  color: #fff;
+}
+
+.intro__title {
+  font-size: 1.75rem;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.29px;
+}
+
+.intro__description {
+  margin-top: 1rem;
+  line-height: 1.625;
+}
+
+.wrapper__main__offer {
+  margin-top: 4rem;
+  font-size: 0.9375rem;
+}
+
+.offer__text {
+  background-color: var(--accent-blue);
+  padding: 1.125rem 4.125rem;
+  border-radius: 10px;
+  line-height: 1.73;
+  letter-spacing: 0.27px;
+  box-shadow: 0 8px 0 0 hsla(0, 0%, 0%, 14.69%);
+  color: #fff;
+}
+
+.wrapper__main__offer em {
+  font-style: normal;
+  font-weight: 700;
+}
+
+.offer__signup-form {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 0 0 hsla(0, 0%, 0%, 14.69%);
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-form__container {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.signup-form__input {
+  padding: 0.9375rem 0;
+  padding-left: 19.41px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.85;
+  letter-spacing: 0.25px;
+  color: var(--neutral-dark-blue);
+  outline: 1px solid transparent;
+}
+
+.signup-form__error-message {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 0.6875rem;
+  text-align: right;
+  margin-top: 2px;
+  color: var(--primary-red);
+}
+
+.signup-form__error-icon {
+  position: absolute;
+  top: 22px;
+  right: 16px;
+  width: 16px;
+  height: 16px;
+}
+
+.hidden {
+  display: none;
+}
+
+.signup-form__input:focus-within {
+  outline-color: var(--accent-blue);
+}
+
+.signup-form__input[aria-invalid="true"] {
+  outline: 2px solid var(--primary-red);
+}
+
+.signup-form__input::placeholder {
+  color: var(--neutral-dark-blue-placeHolder);
+}
+
+.signup-form__button {
+  background-color: var(--primary-green);
+  padding: 0.9375rem 0;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 600;
+  line-height: 1.73;
+  box-shadow: 0 -4px 0 0 hsla(0, 0%, 0%, 9.09%);
+}
+
+.signup-form__terms {
+  margin-top: 0.5rem;
+  color: var(--neutral-grayish-blue);
+  font-size: 0.6875rem;
+  line-height: 1.91;
+  max-width: 89.4%;
+  margin-inline: auto;
+}
+
+.signup-form__terms a {
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--primary-red);
+}
+
+/* Footer */
+.footer {
+  margin-top: auto;
+}
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(0, 0%, 100%);
+  font-weight: 600;
+}
+
+/* Desktop next */
+@media (min-width: 80rem) {
+  body {
+    background-image: url("/images/bg-intro-desktop.png");
+    background-size: 100%;
+    text-align: revert;
+  }
+
+  .wrapper {
+    max-width: revert;
+  }
+
+  .wrapper__main {
+    min-height: 100vh;
+    padding: 7.5625rem 10.3125rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    place-content: center;
+  }
+
+  .wrapper__main__intro {
+    max-width: 32.8125rem;
+    margin-right: 2.8125rem;
+    align-self: center;
+  }
+
+  .intro__title {
+    font-size: 3.125rem;
+    line-height: 1.1;
+    letter-spacing: -0.52px;
+  }
+
+  .intro__description {
+    margin-top: 0.6875rem;
+  }
+
+  .wrapper__main__offer {
+    margin-top: revert;
+  }
+
+  .offer__text {
+    padding: 1.125rem 7rem;
+    text-align: center;
+  }
+
+  .offer__signup-form {
+    padding: 2.5rem;
+  }
+
+  .signup-form__container {
+    margin-bottom: 1.25rem;
+  }
+
+  .signup-form__input {
+    padding-left: 2rem;
+  }
+
+  .signup-form__error-message {
+    margin-top: 6px;
+  }
+
+  .signup-form__error-icon {
+    width: 24px;
+    height: 24px;
+    top: 16px;
+    right: 27px;
+  }
+
+  .signup-form__button:hover,
+  .signup-form__button:focus {
+    cursor: pointer;
+    background-color: var(--primary-green-hover);
+  }
+}
