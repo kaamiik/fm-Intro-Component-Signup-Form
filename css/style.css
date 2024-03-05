@@ -266,7 +266,7 @@ body {
   }
 
   .wrapper {
-    max-width: revert;
+    max-width: 90rem;
   }
 
   .wrapper__main {
@@ -278,7 +278,6 @@ body {
   }
 
   .wrapper__main__intro {
-    max-width: 32.8125rem;
     margin-right: 2.8125rem;
     align-self: center;
   }
